@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Software Distrito Térmico</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZwv-model-vue1T" crossorigin="anonymous">-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link href="ccs/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+  
+
+  </head>
+  <body onload="ocultartablas()">
+  
+
+    <h1>Software Distrito Térmico</h1>
+    <button onclick="paso1()" class="button" id="button">Tamaño DT</button>
+    <!--<div id="divbotonchiller">-->
+    <button onclick="paso2()" class="button" id="button">Chillers</button>
+    <!--</div>-->
+    <div id="divbotonmostrar">
+      <button onclick="mostrartabla()" class="button" id="button">Mostrar Tabla</button>
+    </div>
+
+    <table style="border-collapse: separate;" border="2" width="800" id="centri">
+ 
+    <thead>
+        <tr>
+          <th>Energía</th>
+          <th>Emisiones CO2</th>
+          <th>Capex</th>
+          <th>Opex</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Red pública</th>
+          <td id="rpc"></td>
+          <td id="capexc"></td>
+          <td id="oc"></td>
+        </tr>
+        <tr>
+          <th>Microturbina a gas</th>
+          <td id="gc"></td>
+          <td id="cc"></td>
+          <td id="oc"></td>
+        </tr>
+        <tr>
+          <th>Solar fotovoltaica</th>
+          <td id="0"></td>
+          <td id="ftc"></td>
+        </tr>
+        <tr>
+          <th>Energía eolica</th>
+          <td id="0"></td>
+          <td id="ec"></td>
+          <td id="oc"></td>
+        </tr>
+        <tr>
+          <th>Energía biomasa</th>
+          <td id="0"></td>
+          <td id="bc"></td>
+          <td id="oc"></td>
+        </tr>
+        <tr>
+          <th>Toneladas de refrigeración que suministran los chillers centrifugos:</th>
+          <td id="totalc"></td>
+          <td id="0"></td>
+          <td id="0"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <table id="absor">
+        <thead>
+          <tr>
+            <th>Energía</th>
+            <th>Emisiones CO2</th>
+            <th>Capex</th>
+            <th>Opex</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Microturbina a gas</th>
+            <td id="ga"></td>
+            <td id="ca"></td>
+            <td id="oa"></td>
+          </tr>
+          <tr>
+            <th>Solar térmica</th>
+            <td id="0"></td>
+            <td id="capexa"></td>
+            <td id="oa"></td>
+          </tr>
+          <tr>
+            <th>Energía biomasa</th>
+            <td id="0"></td>
+            <td id="ba"></td>
+            <td id="oa"></td>
+          </tr>
+          <tr>
+            <th>Toneladas de refrigeración que suministran los chillers de absorción:</th>
+            <td id="totala"></td>
+            <td id="0"></td>
+            <td id="0"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+    
+    <script src="javascript/dt.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>-->
+
+  </body>
+</html>
