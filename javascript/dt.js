@@ -20,7 +20,7 @@ function paso1() {
     } while (tentrada === "" || tentrada === null);
     let tsalida;
     do {
-      tsalida = prompt("Introduce un valor de temperatura de entrada:");
+      tsalida = prompt("Introduce un valor de temperatura de salida:");
     } while (tsalida === "" || tsalida === null);
     
     // Convertimos el valor introducido en un número y realizamos el cálculo
@@ -33,12 +33,31 @@ function paso1() {
   }
   function paso2(){
     // Pedimos al usuario que introduzca un valor
-    let c500 = prompt("Introduce cantidad de chiller centrifugo de 500TR:");
-    let c750 = prompt("Introduce cantidad de chiller centrifugo de 750TR:");
-    let c1000 = prompt("Introduce cantidad de chiller centrifugo de 1000TR:");
-    let a500 = prompt("Introduce cantidad de chiller de absorción de 500TR:");
-    let a750 = prompt("Introduce cantidad de chiller de absorción de 750TR:");
-    let a1000 = prompt("Introduce cantidad de chiller de absorción de 1000TR:");
+    let c500;
+    do {
+      c500 = prompt("Introduce cantidad de chiller centrifugo de 500TR:");
+    } while (c500 === "" || c500 === null);
+    let c750;
+    do {
+      c750 = prompt("Introduce cantidad de chiller centrifugo de 750TR:");
+    } while (c750 === "" || c750 === null);
+    let c1000;
+    do {
+      c1000 = prompt("Introduce cantidad de chiller centrifugo de 1000TR:");
+    } while (c1000 === "" || c1000 === null);
+    let a500;
+    do {
+      a500 = prompt("Introduce cantidad de chiller de absorción de 500TR:");
+    } while (a500 === "" || a500 === null);
+    let a750;
+    do {
+      a750 = prompt("Introduce cantidad de chiller de absorción de 750TR:");
+    } while (a750 === "" || a750 === null);
+    let a1000;
+    do {
+      a1000 = prompt("Introduce cantidad de chiller de absorción de 1000TR:");
+    } while (a1000 === "" || a1000 === null);
+    
     // Convertimos el valor introducido en un número y realizamos el cálculo
     let totalc= Number(500*c500)+(750*c750)+(1000*c1000)
     let totala= Number(500*a500)+(750*a750)+(1000*a1000)
